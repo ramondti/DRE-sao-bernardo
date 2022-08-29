@@ -1,3 +1,4 @@
+import "dotenv/config";
 import knex from "../database/db";
 export class FindAllDataService {
   async execute() {

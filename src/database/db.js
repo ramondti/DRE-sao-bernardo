@@ -6,14 +6,18 @@ Oracle.initOracleClient({ libDir: process.env.ORACLE_DIR });
 export default knex({
   client: "oracledb",
   connection: {
-    host: "192.168.240.1",
-    port: 1521,
-    user: "APP_ALLSTRATEGY",
-    password: "mUnMhbjrYFCw",
-    database: "mv2000",
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    connectString: process.env.DB_CONNECTION,
     pool: {
-      min: 1,
-      max: 5,
+      min: 2,
+      max: 6,
+      createTimeoutMillis: 3000,
+      acquireTimeoutMillis: 30000,
+      idleTimeoutMillis: 30000,
+      reapIntervalMillis: 1000,
+      createRetryIntervalMillis: 100,
+      propagateCreateError: false, // <- default is true, set to false
     },
   },
 });
