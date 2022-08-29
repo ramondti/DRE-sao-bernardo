@@ -6,10 +6,11 @@ Oracle.initOracleClient({ libDir: process.env.ORACLE_DIR });
 export default knex({
   client: "oracledb",
   connection: {
+    host: "192.168.240.1",
+    port: 1521,
     user: "APP_ALLSTRATEGY",
     password: "mUnMhbjrYFCw",
-    connectString:
-      "DESCRIPTION=(ADDRESS_LIST =(ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.240.1)(PORT = 1521)))(CONNECT_DATA = (SERVER = DEDICATED) (SID = mv2000)))",
+    database: "mv2000",
     pool: {
       min: 2,
       max: 6,
