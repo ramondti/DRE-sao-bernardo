@@ -1,4 +1,3 @@
-import "dotenv/config";
 import knex from "knex";
 import Oracle from "oracledb";
 
@@ -12,7 +11,7 @@ export default knex({
     connectString: process.env.DB_CONNECTION,
     pool: {
       min: 1,
-      max: 3,
+      max: 5,
     },
   },
 });
