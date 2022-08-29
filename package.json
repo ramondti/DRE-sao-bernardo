@@ -16,7 +16,7 @@
     "fs": "^0.0.1-security",
     "gitlab": "^14.2.2",
     "jsonpath": "^1.1.1",
-    "knex": "^0.95.15",
+    "knex": "^0.21.1",
     "node-cron": "^3.0.0",
     "nodemon": "^2.0.15",
     "oracledb": "5.3",
