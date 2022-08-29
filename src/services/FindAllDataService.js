@@ -3,9 +3,7 @@ export class FindAllDataService {
   async execute() {
     try {
       const getMes = await knex.raw(`
-      SELECT DISTINCT dt_mes,dt_ano  
-      FROM app_allstrategy.tbl_dti_financeiro
-      WHERE TP_STATUS = 'A'
+      SELECT DISTINCT dt_mes,dt_ano FROM app_allstrategy.tbl_dti_financeiro WHERE TP_STATUS = 'A'
       `);
 
       if (!getMes || getMes.length === 0) {

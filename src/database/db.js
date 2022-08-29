@@ -11,7 +11,7 @@ export default knex({
     connectString: process.env.DB_CONNECTION,
     pool: {
       min: 1,
-      max: 5,
+      max: 3,
     },
   },
 });
