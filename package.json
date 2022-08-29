@@ -17,9 +17,9 @@
     "gitlab": "^14.2.2",
     "jsonpath": "^1.1.1",
     "knex": "^0.21.1",
-    "node-cron": "^3.0.0",
+    "node-cron": "^2.0.3",
     "nodemon": "^2.0.15",
-    "oracledb": "5.3",
+    "oracledb": "^5.4.0",
     "sucrase": "^3.20.3",
     "xpress": "^2.4.6"
   }
