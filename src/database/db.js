@@ -11,5 +11,9 @@ export default knex({
     user: "APP_ALLSTRATEGY",
     password: "mUnMhbjrYFCw",
     database: "mv2000",
+    pool: {
+      min: 1,
+      max: 5,
+    },
   },
 });
