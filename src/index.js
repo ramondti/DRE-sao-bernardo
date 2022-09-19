@@ -6,8 +6,8 @@ const app = express();
 
 app.use(express.json({ limit: "1000mb" }));
 
-cron.schedule("* * * * *", async () => {
-  console.log(" ### Executando a tarefa a cada 2 minuto");
+cron.schedule("* 10 * * *", async () => {
+  console.log(" ### Executando a tarefa a cada 10 minuto");
   const service = new FindDreService();
   await service.execute();
 });
