@@ -17,8 +17,8 @@ cron.schedule("*/10 * * * *", async () => {
 //   return res.json(await findDreService.execute());
 // });
 
-app.listen(9090, (err, data) => {
-  console.log(" ### Ouvindo na porta 9090");
+app.listen(9292, (err, data) => {
+  console.log(" ### Ouvindo na porta 9292");
 });
 
 export default app;
